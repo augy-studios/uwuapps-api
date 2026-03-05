@@ -20,11 +20,11 @@
         ]
     }],
     "rewrites": [{
-            "source": "uen/generate",
+            "source": "/uen/generate",
             "destination": "/api/uen/generate"
         },
         {
-            "source": "uen/validate",
+            "source": "/uen/validate",
             "destination": "/api/uen/validate"
         }
     ]
