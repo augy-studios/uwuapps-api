@@ -3,8 +3,29 @@
     "version": 2,
     "cleanUrls": true,
     "regions": ["sin1"],
-    "rewrites": [{
-        "source": "/",
-        "destination": "/"
+    "headers": [{
+        "source": "/api/(.*)",
+        "headers": [{
+                "key": "Access-Control-Allow-Origin",
+                "value": "*"
+            },
+            {
+                "key": "Access-Control-Allow-Methods",
+                "value": "GET, OPTIONS"
+            },
+            {
+                "key": "Cache-Control",
+                "value": "no-store"
+            }
+        ]
     }]
+    "rewrites": [{
+            "source": "uen/generate",
+            "destination": "/api/uen/generate"
+        },
+        {
+            "source": "uen/validate",
+            "destination": "/api/uen/validate"
+        }
+    ]
 }
