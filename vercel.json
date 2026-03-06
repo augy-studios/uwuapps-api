@@ -9,6 +9,9 @@
         },
         "api/uen/*.js": {
             "maxDuration": 30
+        },
+        "api/carplate/*.js": {
+            "maxDuration": 30
         }
     },
     "headers": [{
@@ -46,6 +49,14 @@
         {
             "source": "/nric/validate",
             "destination": "/api/nric/validate"
+        },
+        {
+            "source": "/carplate/generate",
+            "destination": "/api/carplate/generate"
+        },
+        {
+            "source": "/carplate/validate",
+            "destination": "/api/carplate/validate"
         }
     ]
 }
