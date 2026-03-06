@@ -3,6 +3,14 @@
     "version": 2,
     "cleanUrls": true,
     "regions": ["sin1"],
+    "functions": {
+        "api/nric/*.js": {
+            "maxDuration": 30
+        },
+        "api/uen/*.js": {
+            "maxDuration": 30
+        }
+    },
     "headers": [{
         "source": "/api/(.*)",
         "headers": [{
@@ -26,6 +34,18 @@
         {
             "source": "/uen/validate",
             "destination": "/api/uen/validate"
+        },
+        {
+            "source": "/nric/generate",
+            "destination": "/api/nric/generate"
+        },
+        {
+            "source": "/nric/reconstruct",
+            "destination": "/api/nric/reconstruct"
+        },
+        {
+            "source": "/nric/validate",
+            "destination": "/api/nric/validate"
         }
     ]
 }
