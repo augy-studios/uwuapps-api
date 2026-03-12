@@ -12,24 +12,37 @@
         },
         "api/carplate/*.js": {
             "maxDuration": 30
+        },
+        "api/calc/*.js": {
+            "maxDuration": 30
+        },
+        "api/convert/*.js": {
+            "maxDuration": 30
         }
     },
-    "headers": [{
-        "source": "/api/(.*)",
-        "headers": [{
-                "key": "Access-Control-Allow-Origin",
-                "value": "*"
-            },
-            {
-                "key": "Access-Control-Allow-Methods",
-                "value": "GET, OPTIONS"
-            },
-            {
-                "key": "Cache-Control",
-                "value": "no-store"
-            }
-        ]
-    }],
+    "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+        },
+        {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET, OPTIONS"
+        },
+        {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type"
+        },
+        {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate, no-store"
+        }
+      ]
+    }
+  ],
     "rewrites": [{
             "source": "/uen/generate",
             "destination": "/api/uen/generate"
@@ -57,6 +70,42 @@
         {
             "source": "/carplate/validate",
             "destination": "/api/carplate/validate"
+        },
+        {
+            "source": "/calc/age",
+            "destination": "/api/calc/age"
+        },
+        {
+            "source": "/calc/bmi",
+            "destination": "/api/calc/bmi"
+        },
+        {
+            "source": "/calc/days",
+            "destination": "/api/calc/days"
+        },
+        {
+            "source": "/calc/interest",
+            "destination": "/api/calc/interest"
+        },
+        {
+            "source": "/convert/temperature",
+            "destination": "/api/convert/temperature"
+        },
+        {
+            "source": "/convert/weight",
+            "destination": "/api/convert/weight"
+        },
+        {
+            "source": "/convert/base",
+            "destination": "/api/convert/base"
+        },
+        {
+            "source": "/convert/morse",
+            "destination": "/api/convert/morse"
+        },
+        {
+            "source": "/convert/currency",
+            "destination": "/api/convert/currency"
         }
     ]
 }
