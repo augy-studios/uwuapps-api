@@ -103,6 +103,14 @@
         {
             "source": "/convert/currency",
             "destination": "/api/convert/currency"
+        },
+        {
+            "source": "/convert/cipher",
+            "destination": "/api/convert/cipher"
+        },
+        {
+            "source": "/convert/encode",
+            "destination": "/api/convert/encode"
         }
     ]
 }
