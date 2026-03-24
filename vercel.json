@@ -131,6 +131,10 @@
         {
             "source": "/search/cocktail",
             "destination": "/api/search/cocktail"
+        },
+        {
+            "source": "/random/coinflip",
+            "destination": "/api/random/coinflip"
         }
     ]
 }
