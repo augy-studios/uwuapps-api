@@ -145,6 +145,10 @@
             "destination": "/api/random/palette"
         },
         {
+            "source": "/random/dice",
+            "destination": "/api/random/dice"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         }
