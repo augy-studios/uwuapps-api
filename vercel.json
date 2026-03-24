@@ -127,6 +127,10 @@
         {
             "source": "/check/contrast",
             "destination": "/api/check/contrast"
+        },
+        {
+            "source": "/search/cocktail",
+            "destination": "/api/search/cocktail"
         }
     ]
 }
