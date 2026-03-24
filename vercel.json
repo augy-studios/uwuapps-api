@@ -85,6 +85,10 @@
             "destination": "/api/calc/interest"
         },
         {
+            "source": "/calc/aspect",
+            "destination": "/api/calc/aspect"
+        },
+        {
             "source": "/convert/temperature",
             "destination": "/api/convert/temperature"
         },
@@ -111,6 +115,18 @@
         {
             "source": "/convert/encode",
             "destination": "/api/convert/encode"
+        },
+        {
+            "source": "/captcha/generate",
+            "destination": "/api/captcha/generate"
+        },
+        {
+            "source": "/captcha/verify",
+            "destination": "/api/captcha/verify"
+        },
+        {
+            "source": "/check/contrast",
+            "destination": "/api/check/contrast"
         }
     ]
 }
