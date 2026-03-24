@@ -143,6 +143,10 @@
         {
             "source": "/random/palette",
             "destination": "/api/random/palette"
+        },
+        {
+            "source": "/detect/browser",
+            "destination": "/api/detect/browser"
         }
     ]
 }
