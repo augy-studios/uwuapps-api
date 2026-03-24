@@ -135,6 +135,10 @@
         {
             "source": "/random/coinflip",
             "destination": "/api/random/coinflip"
+        },
+        {
+            "source": "/random/palette",
+            "destination": "/api/random/palette"
         }
     ]
 }
