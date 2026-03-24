@@ -133,6 +133,10 @@
             "destination": "/api/search/cocktail"
         },
         {
+            "source": "/search/country",
+            "destination": "/api/search/country"
+        },
+        {
             "source": "/random/coinflip",
             "destination": "/api/random/coinflip"
         },
