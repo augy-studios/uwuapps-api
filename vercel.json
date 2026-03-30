@@ -149,6 +149,10 @@
             "destination": "/api/random/dice"
         },
         {
+            "source": "/random/hangman",
+            "destination": "/api/random/hangman"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
