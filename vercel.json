@@ -189,6 +189,10 @@
             "destination": "/api/generate/password"
         },
         {
+            "source": "/generate/qr",
+            "destination": "/api/generate/qr"
+        },
+        {
             "source": "/predict/gender",
             "destination": "/api/predict/gender"
         },
@@ -199,6 +203,10 @@
         {
             "source": "/predict/nationality",
             "destination": "/api/predict/nationality"
+        },
+        {
+            "source": "/scan/qr",
+            "destination": "/api/scan/qr"
         }
     ]
 }
