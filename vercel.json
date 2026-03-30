@@ -153,6 +153,10 @@
             "destination": "/api/search/recipe"
         },
         {
+            "source": "/search/word",
+            "destination": "/api/search/word"
+        },
+        {
             "source": "/random/image",
             "destination": "/api/random/image"
         },
