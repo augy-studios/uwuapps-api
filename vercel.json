@@ -169,6 +169,10 @@
             "destination": "/api/random/joke"
         },
         {
+            "source": "/random/pokemon",
+            "destination": "/api/random/pokemon"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
