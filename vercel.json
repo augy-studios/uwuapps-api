@@ -189,6 +189,10 @@
             "destination": "/api/random/quote"
         },
         {
+            "source": "/random/rps",
+            "destination": "/api/random/rps"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
