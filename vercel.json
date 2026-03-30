@@ -153,6 +153,10 @@
             "destination": "/api/random/hangman"
         },
         {
+            "source": "/random/joke",
+            "destination": "/api/random/joke"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
