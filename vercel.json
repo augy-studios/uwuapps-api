@@ -151,6 +151,10 @@
         {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
+        },
+        {
+            "source": "/generate/gradient",
+            "destination": "/api/generate/gradient"
         }
     ]
 }
