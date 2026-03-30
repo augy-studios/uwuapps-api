@@ -167,6 +167,18 @@
         {
             "source": "/generate/gradient",
             "destination": "/api/generate/gradient"
+        },
+        {
+            "source": "/predict/gender",
+            "destination": "/api/predict/gender"
+        },
+        {
+            "source": "/predict/age",
+            "destination": "/api/predict/age"
+        },
+        {
+            "source": "/predict/nationality",
+            "destination": "/api/predict/nationality"
         }
     ]
 }
