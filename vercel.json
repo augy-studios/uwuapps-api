@@ -129,6 +129,10 @@
             "destination": "/api/check/contrast"
         },
         {
+            "source": "/check/password",
+            "destination": "/api/check/password"
+        },
+        {
             "source": "/search/cocktail",
             "destination": "/api/search/cocktail"
         },
