@@ -69,6 +69,14 @@
             "destination": "/api/carplate/validate"
         },
         {
+            "source": "/sg/bus-arrivals",
+            "destination": "/api/sg/bus-arrivals"
+        },
+        {
+            "source": "/sg/bus-stops",
+            "destination": "/api/sg/bus-stops"
+        },
+        {
             "source": "/calc/age",
             "destination": "/api/calc/age"
         },
