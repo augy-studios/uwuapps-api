@@ -213,6 +213,10 @@
             "destination": "/api/random/rps"
         },
         {
+            "source": "/random/spin",
+            "destination": "/api/random/spin"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
