@@ -177,6 +177,14 @@
             "destination": "/api/random/pokemon"
         },
         {
+            "source": "/random/pick",
+            "destination": "/api/random/pick"
+        },
+        {
+            "source": "/random/quote",
+            "destination": "/api/random/quote"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
