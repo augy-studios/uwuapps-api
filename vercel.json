@@ -181,6 +181,10 @@
             "destination": "/api/generate/gradient"
         },
         {
+            "source": "/generate/password",
+            "destination": "/api/generate/password"
+        },
+        {
             "source": "/predict/gender",
             "destination": "/api/predict/gender"
         },
