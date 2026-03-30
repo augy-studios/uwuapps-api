@@ -77,6 +77,14 @@
             "destination": "/api/sg/bus-stops"
         },
         {
+            "source": "/sg/psi",
+            "destination": "/api/sg/psi"
+        },
+        {
+            "source": "/sg/psi-daily",
+            "destination": "/api/sg/psi-daily"
+        },
+        {
             "source": "/calc/age",
             "destination": "/api/calc/age"
         },
