@@ -137,6 +137,10 @@
             "destination": "/api/search/country"
         },
         {
+            "source": "/search/movie",
+            "destination": "/api/search/movie"
+        },
+        {
             "source": "/random/coinflip",
             "destination": "/api/random/coinflip"
         },
