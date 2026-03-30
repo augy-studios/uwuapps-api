@@ -141,6 +141,14 @@
             "destination": "/api/search/movie"
         },
         {
+            "source": "/search/image",
+            "destination": "/api/search/image"
+        },
+        {
+            "source": "/random/image",
+            "destination": "/api/random/image"
+        },
+        {
             "source": "/random/coinflip",
             "destination": "/api/random/coinflip"
         },
