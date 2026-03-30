@@ -149,6 +149,10 @@
             "destination": "/api/search/image"
         },
         {
+            "source": "/search/recipe",
+            "destination": "/api/search/recipe"
+        },
+        {
             "source": "/random/image",
             "destination": "/api/random/image"
         },
