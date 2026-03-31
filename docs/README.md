@@ -17,8 +17,11 @@ Welcome to the **UwU Apps API** documentation. This is a free, serverless REST A
 | [Random](random/joke.md)          | Jokes, Pokémon, images, quotes, dice, coin flips, and more                 |
 | [Search](search/movie.md)         | Movies, recipes, cocktails, countries, words, images                       |
 | [SG](sg/bus-arrivals.md)          | Singapore bus arrivals, bus stops, and air quality (PSI)                   |
-| [Detect](detect/browser.md)       | Browser and OS detection                                                   |
+| [Detect](detect/browser.md)       | Browser and OS detection, reverse geocoding                                |
 | [Scan](scan/qr.md)                | QR code scanning                                                           |
+| [Translate](translate/text.md)    | Text translation and language detection                                    |
+| [Weather](weather/current.md)     | Current weather, 7-day forecast, and precipitation nowcast                 |
+| [Wordle](wordle/word.md)          | Get and validate words for Wordle-style games                              |
 | [CAPTCHA](captcha.md)             | CAPTCHA generation and verification                                        |
 
 ## Quick start
