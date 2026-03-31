@@ -217,6 +217,10 @@
             "destination": "/api/random/spin"
         },
         {
+            "source": "/random/word",
+            "destination": "/api/random/word"
+        },
+        {
             "source": "/detect/browser",
             "destination": "/api/detect/browser"
         },
