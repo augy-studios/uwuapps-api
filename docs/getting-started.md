@@ -3,13 +3,7 @@
 ## Base URL
 
 ```
-https://api.uwuapps.com
-```
-
-All API endpoints are prefixed with `/api/`. For example:
-
-```
-https://api.uwuapps.com/api/calc/age
+https://api.uwuapps.org
 ```
 
 ## Making requests
@@ -17,7 +11,7 @@ https://api.uwuapps.com/api/calc/age
 All endpoints accept **HTTP GET** requests with parameters passed as query strings. The only exception is [QR code scanning](scan/qr.md), which accepts a `POST` with a file upload.
 
 ```bash
-curl "https://api.uwuapps.com/api/calc/age?date=2000-01-15"
+curl "https://api.uwuapps.org/calc/age?date=2000-01-15"
 ```
 
 ## Response format
@@ -57,15 +51,15 @@ Every response is JSON with a `success` field.
 
 ## HTTP status codes
 
-| Code | Meaning |
-|---|---|
-| `200` | Success |
+| Code  | Meaning                                     |
+| ----- | ------------------------------------------- |
+| `200` | Success                                     |
 | `400` | Bad request — missing or invalid parameters |
-| `404` | No results found |
-| `405` | Method not allowed |
-| `422` | Validation failed |
-| `500` | Server misconfiguration |
-| `502` | Upstream API error |
+| `404` | No results found                            |
+| `405` | Method not allowed                          |
+| `422` | Validation failed                           |
+| `500` | Server misconfiguration                     |
+| `502` | Upstream API error                          |
 
 ## CORS
 

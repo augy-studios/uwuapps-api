@@ -4,16 +4,16 @@ A simple CAPTCHA system using HMAC-signed tokens. Tokens expire after 5 minutes.
 
 ## Flow
 
-1. Call `/api/captcha/generate` to get a CAPTCHA challenge and a signed token.
+1. Call `/captcha/generate` to get a CAPTCHA challenge and a signed token.
 2. Display the `captcha` string to the user.
-3. Submit the user's input along with the `token` to `/api/captcha/verify`.
+3. Submit the user's input along with the `token` to `/captcha/verify`.
 
----
+***
 
 ## Generate
 
 ```
-GET /api/captcha/generate
+GET /captcha/generate
 ```
 
 No parameters required.
@@ -29,26 +29,26 @@ No parameters required.
 }
 ```
 
-| Field | Description |
-|---|---|
-| `captcha` | The challenge string to display to the user |
-| `token` | Signed token to send back with the verification request |
+| Field       | Description                                                |
+| ----------- | ---------------------------------------------------------- |
+| `captcha`   | The challenge string to display to the user                |
+| `token`     | Signed token to send back with the verification request    |
 | `expiresIn` | Seconds until the token expires (always `300` / 5 minutes) |
 
----
+***
 
 ## Verify
 
 ```
-GET /api/captcha/verify
+GET /captcha/verify
 ```
 
 ### Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `input` | Yes | The user's answer to the CAPTCHA challenge |
-| `token` | Yes | The `token` returned from `/api/captcha/generate` |
+| Parameter | Required | Description                                       |
+| --------- | -------- | ------------------------------------------------- |
+| `input`   | Yes      | The user's answer to the CAPTCHA challenge        |
+| `token`   | Yes      | The `token` returned from `/api/captcha/generate` |
 
 ### Response (valid)
 
@@ -70,6 +70,6 @@ GET /api/captcha/verify
 
 ### Notes
 
-- Verification is **case-insensitive**.
-- Tokens are verified using `crypto.timingSafeEqual` to prevent timing attacks.
-- Once a token expires (after 5 minutes), it cannot be used again — request a new one.
+* Verification is **case-insensitive**.
+* Tokens are verified using `crypto.timingSafeEqual` to prevent timing attacks.
+* Once a token expires (after 5 minutes), it cannot be used again — request a new one.
