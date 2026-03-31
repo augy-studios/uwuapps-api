@@ -1,23 +1,23 @@
-# QR Code Generator
+# QR Code
 
 Generates a QR code URL for any text or URL.
 
 ```
-GET /api/generate/qr
+GET /generate/qr
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `data` | Yes | — | The text or URL to encode in the QR code |
-| `size` | No | `200` | Size of the QR code image in pixels (10–1000) |
-| `format` | No | `png` | Image format: `png`, `svg`, or `eps` |
+| Parameter | Required | Default | Description                                   |
+| --------- | -------- | ------- | --------------------------------------------- |
+| `data`    | Yes      | —       | The text or URL to encode in the QR code      |
+| `size`    | No       | `200`   | Size of the QR code image in pixels (10–1000) |
+| `format`  | No       | `png`   | Image format: `png`, `svg`, or `eps`          |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/generate/qr?data=https://uwuapps.com&size=300&format=png"
+curl "https://api.uwuapps.org/generate/qr?data=https://uwuapps.com&size=300&format=png"
 ```
 
 ### Response
@@ -34,15 +34,15 @@ curl "https://api.uwuapps.com/api/generate/qr?data=https://uwuapps.com&size=300&
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `data` | The encoded content |
-| `url` | Direct URL to the generated QR code image |
-| `size` | Image size in pixels |
-| `format` | Image format used |
+| Field    | Description                               |
+| -------- | ----------------------------------------- |
+| `data`   | The encoded content                       |
+| `url`    | Direct URL to the generated QR code image |
+| `size`   | Image size in pixels                      |
+| `format` | Image format used                         |
 
 ## Notes
 
-- The returned `url` links directly to the QR code image — you can use it in an `<img>` tag or download it directly.
-- For `svg` and `eps`, the same URL pattern applies.
-- To scan a QR code image, see [Scan QR Code](../scan/qr.md).
+* The returned `url` links directly to the QR code image — you can use it in an `<img>` tag or download it directly.
+* For `svg` and `eps`, the same URL pattern applies.
+* To scan a QR code image, see [Scan QR Code](../scan/qr.md).

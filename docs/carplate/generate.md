@@ -1,9 +1,9 @@
-# Car Plate Generate
+# Generate
 
 Generates a random valid Singapore vehicle registration plate.
 
 ```
-GET /api/carplate/generate
+GET /carplate/generate
 ```
 
 ## Parameters
@@ -13,7 +13,7 @@ No parameters required.
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/carplate/generate"
+curl "https://api.uwuapps.org/carplate/generate"
 ```
 
 ### Response
@@ -27,5 +27,5 @@ curl "https://api.uwuapps.com/api/carplate/generate"
 
 ## Notes
 
-- The generated plate has a valid checksum.
-- Plates are randomly generated and do not correspond to any registered vehicle.
+* The generated plate has a valid checksum.
+* Plates are randomly generated and do not correspond to any registered vehicle.

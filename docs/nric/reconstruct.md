@@ -1,25 +1,25 @@
-# NRIC Reconstruct
+# Reconstruct
 
 Reconstructs possible NRIC numbers from partial known information. Useful for forensic or administrative recovery scenarios.
 
 ```
-GET /api/nric/reconstruct
+GET /nric/reconstruct
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `last` | Yes | The last N characters of the NRIC (trailing digits + checksum letter), e.g. `567D` |
-| `year` | Yes | 4-digit year of birth, e.g. `1990` |
-| `citizenship` | Yes | Citizenship status: `S` (Singaporean), `P` (Permanent Resident), or `F` (Foreigner) |
-| `born_sg` | Yes | Whether born in Singapore: `Y` or `N` |
-| `month` | No | 3-letter birth month (e.g. `Jan`, `Feb`). Narrows results using SingStat birth data (Singapore-born citizens/PRs only) |
+| Parameter     | Required | Description                                                                                                            |
+| ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `last`        | Yes      | The last N characters of the NRIC (trailing digits + checksum letter), e.g. `567D`                                     |
+| `year`        | Yes      | 4-digit year of birth, e.g. `1990`                                                                                     |
+| `citizenship` | Yes      | Citizenship status: `S` (Singaporean), `P` (Permanent Resident), or `F` (Foreigner)                                    |
+| `born_sg`     | Yes      | Whether born in Singapore: `Y` or `N`                                                                                  |
+| `month`       | No       | 3-letter birth month (e.g. `Jan`, `Feb`). Narrows results using SingStat birth data (Singapore-born citizens/PRs only) |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/nric/reconstruct?last=567D&year=1990&citizenship=S&born_sg=Y"
+curl "https://api.uwuapps.org/nric/reconstruct?last=567D&year=1990&citizenship=S&born_sg=Y"
 ```
 
 ### Response
@@ -38,11 +38,11 @@ curl "https://api.uwuapps.com/api/nric/reconstruct?last=567D&year=1990&citizensh
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `count` | Total number of matching NRICs found |
+| Field       | Description                                     |
+| ----------- | ----------------------------------------------- |
+| `count`     | Total number of matching NRICs found            |
 | `truncated` | `true` if the result was capped at 1000 entries |
-| `nrics` | Array of valid matching NRIC strings (max 1000) |
+| `nrics`     | Array of valid matching NRIC strings (max 1000) |
 
 ## How it works
 
@@ -55,6 +55,6 @@ curl "https://api.uwuapps.com/api/nric/reconstruct?last=567D&year=1990&citizensh
 
 ## Notes
 
-- A minimum of 1 character (the checksum letter) must be provided in `last`.
-- Results are capped at 1000 to prevent excessively large payloads.
-- The `month` filter is best-effort; if SingStat's API is unreachable, it is skipped and all matches are returned.
+* A minimum of 1 character (the checksum letter) must be provided in `last`.
+* Results are capped at 1000 to prevent excessively large payloads.
+* The `month` filter is best-effort; if SingStat's API is unreachable, it is skipped and all matches are returned.

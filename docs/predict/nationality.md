@@ -1,21 +1,21 @@
-# Predict Nationality
+# Nationality
 
 Predicts the likely nationality of a person based on their first name, using the [Nationalize.io](https://nationalize.io) API.
 
 ```
-GET /api/predict/nationality
+GET /predict/nationality
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `name` | Yes | The first name to analyze |
+| Parameter | Required | Description               |
+| --------- | -------- | ------------------------- |
+| `name`    | Yes      | The first name to analyze |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/predict/nationality?name=Wei"
+curl "https://api.uwuapps.org/predict/nationality?name=Wei"
 ```
 
 ### Response
@@ -34,14 +34,14 @@ curl "https://api.uwuapps.com/api/predict/nationality?name=Wei"
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `name` | The name queried |
-| `country` | Array of predicted nationalities sorted by probability |
-| `country[].country_id` | ISO 3166-1 alpha-2 country code |
-| `country[].probability` | Confidence from 0 to 1 |
+| Field                   | Description                                            |
+| ----------------------- | ------------------------------------------------------ |
+| `name`                  | The name queried                                       |
+| `country`               | Array of predicted nationalities sorted by probability |
+| `country[].country_id`  | ISO 3166-1 alpha-2 country code                        |
+| `country[].probability` | Confidence from 0 to 1                                 |
 
 ## Notes
 
-- Multiple nationalities may be returned, ordered from most to least likely.
-- An empty `country` array means the name was not found in the dataset.
+* Multiple nationalities may be returned, ordered from most to least likely.
+* An empty `country` array means the name was not found in the dataset.
