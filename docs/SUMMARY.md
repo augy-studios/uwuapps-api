@@ -68,6 +68,7 @@
 * [Pick](random/pick.md)
 * [Rock Paper Scissors](random/rps.md)
 * [Spin the Wheel](random/spin.md)
+* [Word](random/word.md)
 
 ## Search
 
@@ -88,7 +89,24 @@
 ## Detect
 
 * [Browser](detect/browser.md)
+* [Location](detect/location.md)
 
 ## Scan
 
 * [QR Code](scan/qr.md)
+
+## Translate
+
+* [Detect Language](translate/detect.md)
+* [Translate Text](translate/text.md)
+
+## Weather
+
+* [Search Location](weather/search.md)
+* [Current Weather](weather/current.md)
+* [Nowcast](weather/nowcast.md)
+
+## Wordle
+
+* [Get Word](wordle/word.md)
+* [Validate Word](wordle/validate.md)
