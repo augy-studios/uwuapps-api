@@ -14,7 +14,9 @@ module.exports = (req, res) => {
     return error(res, '"exclude" cannot contain more than 100 words.');
   }
 
-  const result = getRandomWord(exclude);
+  const game = req.query.game || 'hangman';
+
+  const result = getRandomWord(exclude, game);
   if (result.error) return error(res, result.error);
 
   return success(res, result);
