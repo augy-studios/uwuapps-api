@@ -3,19 +3,19 @@
 Play rock-paper-scissors against the computer.
 
 ```
-GET /api/random/rps
+GET /random/rps
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `choice` | Yes | Your choice: `rock`, `paper`, or `scissors` |
+| Parameter | Required | Description                                 |
+| --------- | -------- | ------------------------------------------- |
+| `choice`  | Yes      | Your choice: `rock`, `paper`, or `scissors` |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/rps?choice=rock"
+curl "https://api.uwuapps.org/random/rps?choice=rock"
 ```
 
 ### Response
@@ -31,8 +31,8 @@ curl "https://api.uwuapps.com/api/random/rps?choice=rock"
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `userChoice` | Your choice |
+| Field            | Description                           |
+| ---------------- | ------------------------------------- |
+| `userChoice`     | Your choice                           |
 | `computerChoice` | The computer's randomly chosen option |
-| `result` | Outcome: `win`, `lose`, or `draw` |
+| `result`         | Outcome: `win`, `lose`, or `draw`     |

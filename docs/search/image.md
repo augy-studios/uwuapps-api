@@ -1,23 +1,23 @@
-# Search Images
+# Image
 
 Searches for photos by keyword. Powered by [Pexels](https://www.pexels.com).
 
 ```
-GET /api/search/image
+GET /search/image
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `q` | Yes | — | Search query |
-| `page` | No | `1` | Page number for pagination |
-| `perPage` | No | `10` | Number of results per page |
+| Parameter | Required | Default | Description                |
+| --------- | -------- | ------- | -------------------------- |
+| `q`       | Yes      | —       | Search query               |
+| `page`    | No       | `1`     | Page number for pagination |
+| `perPage` | No       | `10`    | Number of results per page |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/search/image?q=sunset&perPage=3"
+curl "https://api.uwuapps.org/search/image?q=sunset&perPage=3"
 ```
 
 ### Response
@@ -47,7 +47,7 @@ curl "https://api.uwuapps.com/api/search/image?q=sunset&perPage=3"
 
 ## Notes
 
-- Requires a valid `PEXELS_API_KEY` configured on the server.
-- Returns `500` if the API key is not configured.
-- Returns `404` if no images match the query.
-- Returns `502` if the Pexels API is unreachable.
+* Requires a valid `PEXELS_API_KEY` configured on the server.
+* Returns `500` if the API key is not configured.
+* Returns `404` if no images match the query.
+* Returns `502` if the Pexels API is unreachable.

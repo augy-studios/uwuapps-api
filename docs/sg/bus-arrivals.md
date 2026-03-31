@@ -1,21 +1,21 @@
-# Bus Arrivals (Singapore)
+# Bus Arrivals
 
 Returns real-time bus arrival estimates for a Singapore bus stop. Powered by [BusRouter SG](https://busrouter.sg).
 
 ```
-GET /api/sg/bus-arrivals
+GET /sg/bus-arrivals
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `code` | Yes | 5-digit bus stop code (e.g. `83139`) |
+| Parameter | Required | Description                          |
+| --------- | -------- | ------------------------------------ |
+| `code`    | Yes      | 5-digit bus stop code (e.g. `83139`) |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/sg/bus-arrivals?code=83139"
+curl "https://api.uwuapps.org/sg/bus-arrivals?code=83139"
 ```
 
 ### Response
@@ -56,27 +56,27 @@ curl "https://api.uwuapps.com/api/sg/bus-arrivals?code=83139"
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `stopCode` | The queried bus stop code |
-| `fetchedAt` | Timestamp of when the data was fetched (ISO 8601) |
-| `services` | Array of bus services at this stop |
-| `services[].serviceNo` | Bus service number |
-| `services[].next` | Next arriving bus |
-| `services[].subsequent` | Second next bus |
-| `services[].subsequent2` | Third next bus |
+| Field                    | Description                                       |
+| ------------------------ | ------------------------------------------------- |
+| `stopCode`               | The queried bus stop code                         |
+| `fetchedAt`              | Timestamp of when the data was fetched (ISO 8601) |
+| `services`               | Array of bus services at this stop                |
+| `services[].serviceNo`   | Bus service number                                |
+| `services[].next`        | Next arriving bus                                 |
+| `services[].subsequent`  | Second next bus                                   |
+| `services[].subsequent2` | Third next bus                                    |
 
 ### Bus arrival object
 
-| Field | Description |
-|---|---|
-| `eta` | Human-readable estimated arrival (e.g. `3 mins`, `45s`) |
-| `durationMs` | Duration in milliseconds until arrival |
-| `load` | Passenger load: `SEA` (seats available), `SDA` (standing available), `LSD` (limited standing) |
-| `type` | Bus type: `SD` (single-deck), `DD` (double-deck), `BD` (bendy) |
-| `feature` | Special feature: `WAB` (wheelchair accessible), or `null` |
+| Field        | Description                                                                                   |
+| ------------ | --------------------------------------------------------------------------------------------- |
+| `eta`        | Human-readable estimated arrival (e.g. `3 mins`, `45s`)                                       |
+| `durationMs` | Duration in milliseconds until arrival                                                        |
+| `load`       | Passenger load: `SEA` (seats available), `SDA` (standing available), `LSD` (limited standing) |
+| `type`       | Bus type: `SD` (single-deck), `DD` (double-deck), `BD` (bendy)                                |
+| `feature`    | Special feature: `WAB` (wheelchair accessible), or `null`                                     |
 
 ## Notes
 
-- Bus stop codes can be found on physical bus stop signs in Singapore or via [BusRouter SG](https://busrouter.sg).
-- Returns `502` if BusRouter SG is unreachable.
+* Bus stop codes can be found on physical bus stop signs in Singapore or via [BusRouter SG](https://busrouter.sg).
+* Returns `502` if BusRouter SG is unreachable.

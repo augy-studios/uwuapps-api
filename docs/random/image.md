@@ -1,22 +1,22 @@
-# Random Image
+# Image
 
 Returns a curated random photo from [Pexels](https://www.pexels.com).
 
 ```
-GET /api/random/image
+GET /random/image
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `page` | No | `1` | Page number for pagination |
-| `perPage` | No | `1` | Number of images to return per page |
+| Parameter | Required | Default | Description                         |
+| --------- | -------- | ------- | ----------------------------------- |
+| `page`    | No       | `1`     | Page number for pagination          |
+| `perPage` | No       | `1`     | Number of images to return per page |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/image"
+curl "https://api.uwuapps.org/random/image"
 ```
 
 ### Response
@@ -44,6 +44,6 @@ curl "https://api.uwuapps.com/api/random/image"
 
 ## Notes
 
-- Requires a valid `PEXELS_API_KEY` configured on the server.
-- Returns `500` if the API key is not configured.
-- Returns `502` if the Pexels API is unreachable.
+* Requires a valid `PEXELS_API_KEY` configured on the server.
+* Returns `500` if the API key is not configured.
+* Returns `502` if the Pexels API is unreachable.

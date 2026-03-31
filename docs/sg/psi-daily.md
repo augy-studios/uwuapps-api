@@ -1,21 +1,21 @@
-# PSI Daily (Singapore)
+# PSI Daily
 
 Returns daily PSI readings for Singapore from [data.gov.sg](https://data.gov.sg).
 
 ```
-GET /api/sg/psi-daily
+GET /sg/psi-daily
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `date` | No | Latest | Specific date to query in `YYYY-MM-DD` format |
+| Parameter | Required | Default | Description                                   |
+| --------- | -------- | ------- | --------------------------------------------- |
+| `date`    | No       | Latest  | Specific date to query in `YYYY-MM-DD` format |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/sg/psi-daily?date=2025-01-15"
+curl "https://api.uwuapps.org/sg/psi-daily?date=2025-01-15"
 ```
 
 ### Response
@@ -40,6 +40,6 @@ curl "https://api.uwuapps.com/api/sg/psi-daily?date=2025-01-15"
 
 ## Notes
 
-- Returns all available readings for the specified date.
-- Returns `404` if no readings are available for the given date.
-- Returns `502` if data.gov.sg is unreachable.
+* Returns all available readings for the specified date.
+* Returns `404` if no readings are available for the given date.
+* Returns `502` if data.gov.sg is unreachable.

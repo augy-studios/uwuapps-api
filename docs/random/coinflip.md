@@ -3,7 +3,7 @@
 Flips a virtual coin and returns heads or tails.
 
 ```
-GET /api/random/coinflip
+GET /random/coinflip
 ```
 
 ## Parameters
@@ -13,7 +13,7 @@ No parameters required.
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/coinflip"
+curl "https://api.uwuapps.org/random/coinflip"
 ```
 
 ### Response
@@ -27,6 +27,6 @@ curl "https://api.uwuapps.com/api/random/coinflip"
 
 ## Response fields
 
-| Field | Values |
-|---|---|
+| Field    | Values             |
+| -------- | ------------------ |
 | `result` | `heads` or `tails` |

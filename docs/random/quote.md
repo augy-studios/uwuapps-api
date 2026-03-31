@@ -1,9 +1,9 @@
-# Random Quote
+# Quote
 
 Returns a random inspirational or famous quote.
 
 ```
-GET /api/random/quote
+GET /random/quote
 ```
 
 ## Parameters
@@ -13,7 +13,7 @@ No parameters required.
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/quote"
+curl "https://api.uwuapps.org/random/quote"
 ```
 
 ### Response
@@ -28,7 +28,7 @@ curl "https://api.uwuapps.com/api/random/quote"
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `quote` | The quote text |
+| Field    | Description             |
+| -------- | ----------------------- |
+| `quote`  | The quote text          |
 | `author` | The author of the quote |

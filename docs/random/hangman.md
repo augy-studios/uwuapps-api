@@ -3,27 +3,27 @@
 Returns a random word for a Hangman game, with optional difficulty filtering.
 
 ```
-GET /api/random/hangman
+GET /random/hangman
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `difficulty` | No | `medium` | Word difficulty: `easy`, `medium`, or `hard` |
+| Parameter    | Required | Default  | Description                                  |
+| ------------ | -------- | -------- | -------------------------------------------- |
+| `difficulty` | No       | `medium` | Word difficulty: `easy`, `medium`, or `hard` |
 
 ## Difficulty levels
 
-| Level | Word length |
-|---|---|
-| `easy` | Short words (≤ 5 letters) |
+| Level    | Word length                |
+| -------- | -------------------------- |
+| `easy`   | Short words (≤ 5 letters)  |
 | `medium` | Medium words (6–8 letters) |
-| `hard` | Long words (9+ letters) |
+| `hard`   | Long words (9+ letters)    |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/hangman?difficulty=easy"
+curl "https://api.uwuapps.org/random/hangman?difficulty=easy"
 ```
 
 ### Response
@@ -40,9 +40,9 @@ curl "https://api.uwuapps.com/api/random/hangman?difficulty=easy"
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `word` | The word to guess |
-| `length` | Number of characters in the word |
-| `difficulty` | The difficulty level returned |
-| `hint` | Blank placeholder string (one underscore per letter) |
+| Field        | Description                                          |
+| ------------ | ---------------------------------------------------- |
+| `word`       | The word to guess                                    |
+| `length`     | Number of characters in the word                     |
+| `difficulty` | The difficulty level returned                        |
+| `hint`       | Blank placeholder string (one underscore per letter) |

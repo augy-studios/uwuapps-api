@@ -1,21 +1,21 @@
-# Search Recipes
+# Recipe
 
 Searches for meal recipes by name. Powered by [TheMealDB](https://www.themealdb.com).
 
 ```
-GET /api/search/recipe
+GET /search/recipe
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `q` | Yes | Meal name to search for |
+| Parameter | Required | Description             |
+| --------- | -------- | ----------------------- |
+| `q`       | Yes      | Meal name to search for |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/search/recipe?q=pasta"
+curl "https://api.uwuapps.org/search/recipe?q=pasta"
 ```
 
 ### Response
@@ -43,6 +43,6 @@ curl "https://api.uwuapps.com/api/search/recipe?q=pasta"
 
 ## Notes
 
-- Returns an array of matching meals.
-- Returns `404` if no meals match the query.
-- Returns `502` if TheMealDB is unreachable.
+* Returns an array of matching meals.
+* Returns `404` if no meals match the query.
+* Returns `502` if TheMealDB is unreachable.

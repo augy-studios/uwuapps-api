@@ -1,9 +1,9 @@
-# Random Color Palette
+# Color Palette
 
 Generates a random set of harmonious colors.
 
 ```
-GET /api/random/palette
+GET /random/palette
 ```
 
 ## Parameters
@@ -13,7 +13,7 @@ No parameters required.
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/palette"
+curl "https://api.uwuapps.org/random/palette"
 ```
 
 ### Response
@@ -33,8 +33,8 @@ curl "https://api.uwuapps.com/api/random/palette"
 
 ## Response fields
 
-| Field | Description |
-|---|---|
-| `palette` | Array of color objects |
-| `palette[].hex` | Color as a hex string |
+| Field           | Description             |
+| --------------- | ----------------------- |
+| `palette`       | Array of color objects  |
+| `palette[].hex` | Color as a hex string   |
 | `palette[].rgb` | Color as RGB components |

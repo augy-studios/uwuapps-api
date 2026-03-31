@@ -1,21 +1,21 @@
-# Search Movies
+# Movie
 
 Searches for movies by title. Powered by the [OMDB API](https://www.omdbapi.com).
 
 ```
-GET /api/search/movie
+GET /search/movie
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `q` | Yes | Movie title to search for |
+| Parameter | Required | Description               |
+| --------- | -------- | ------------------------- |
+| `q`       | Yes      | Movie title to search for |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/search/movie?q=Inception"
+curl "https://api.uwuapps.org/search/movie?q=Inception"
 ```
 
 ### Response
@@ -38,7 +38,7 @@ curl "https://api.uwuapps.com/api/search/movie?q=Inception"
 
 ## Notes
 
-- Requires a valid `OMDB_API_KEY` configured on the server.
-- Returns the first matching result for the given title.
-- Returns `404` if no movie is found.
-- Returns `502` if the OMDB API is unreachable.
+* Requires a valid `OMDB_API_KEY` configured on the server.
+* Returns the first matching result for the given title.
+* Returns `404` if no movie is found.
+* Returns `502` if the OMDB API is unreachable.

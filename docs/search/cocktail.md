@@ -1,21 +1,21 @@
-# Search Cocktails
+# Cocktail
 
 Searches for cocktail recipes by name. Powered by [TheCocktailDB](https://www.thecocktaildb.com).
 
 ```
-GET /api/search/cocktail
+GET /search/cocktail
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `q` | Yes | Cocktail name to search for |
+| Parameter | Required | Description                 |
+| --------- | -------- | --------------------------- |
+| `q`       | Yes      | Cocktail name to search for |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/search/cocktail?q=margarita"
+curl "https://api.uwuapps.org/search/cocktail?q=margarita"
 ```
 
 ### Response
@@ -44,6 +44,6 @@ curl "https://api.uwuapps.com/api/search/cocktail?q=margarita"
 
 ## Notes
 
-- Returns an array of matching cocktails.
-- Returns `404` if no cocktails match the query.
-- Returns `502` if TheCocktailDB is unreachable.
+* Returns an array of matching cocktails.
+* Returns `404` if no cocktails match the query.
+* Returns `502` if TheCocktailDB is unreachable.

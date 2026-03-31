@@ -1,21 +1,21 @@
-# Search Countries
+# Country
 
 Searches for country information by name or code.
 
 ```
-GET /api/search/country
+GET /search/country
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `q` | Yes | Country name or ISO code to search for |
+| Parameter | Required | Description                            |
+| --------- | -------- | -------------------------------------- |
+| `q`       | Yes      | Country name or ISO code to search for |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/search/country?q=Singapore"
+curl "https://api.uwuapps.org/search/country?q=Singapore"
 ```
 
 ### Response
@@ -44,5 +44,5 @@ curl "https://api.uwuapps.com/api/search/country?q=Singapore"
 
 ## Notes
 
-- Search is case-insensitive and supports partial matches.
-- Returns `404` if no countries match the query.
+* Search is case-insensitive and supports partial matches.
+* Returns `404` if no countries match the query.

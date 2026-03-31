@@ -3,19 +3,19 @@
 Looks up the definition(s) of a word. Powered by the [Free Dictionary API](https://dictionaryapi.dev).
 
 ```
-GET /api/search/word
+GET /search/word
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `word` | Yes | The word to look up |
+| Parameter | Required | Description         |
+| --------- | -------- | ------------------- |
+| `word`    | Yes      | The word to look up |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/search/word?word=serendipity"
+curl "https://api.uwuapps.org/search/word?word=serendipity"
 ```
 
 ### Response
@@ -41,5 +41,5 @@ curl "https://api.uwuapps.com/api/search/word?word=serendipity"
 
 ## Notes
 
-- Returns `404` if the word is not found in the dictionary.
-- Returns `502` if the dictionary API is unreachable.
+* Returns `404` if the word is not found in the dictionary.
+* Returns `502` if the dictionary API is unreachable.

@@ -1,23 +1,23 @@
-# QR Code Scanner
+# QR Code
 
 Scans a QR code from an uploaded image and returns the decoded content.
 
 ```
-POST /api/scan/qr
+POST /scan/qr
 ```
 
 ## Request
 
 This endpoint accepts a `multipart/form-data` POST request with an image file.
 
-| Field | Required | Description |
-|---|---|---|
-| `file` | Yes | Image file containing the QR code (JPEG, PNG, GIF, etc.) |
+| Field  | Required | Description                                              |
+| ------ | -------- | -------------------------------------------------------- |
+| `file` | Yes      | Image file containing the QR code (JPEG, PNG, GIF, etc.) |
 
 ## Example
 
 ```bash
-curl -X POST "https://api.uwuapps.com/api/scan/qr" \
+curl -X POST "https://api.uwuapps.org/scan/qr" \
   -F "file=@qrcode.png"
 ```
 
@@ -26,7 +26,7 @@ curl -X POST "https://api.uwuapps.com/api/scan/qr" \
 ```json
 {
   "success": true,
-  "data": "https://uwuapps.com"
+  "data": "https://uwuapps.org"
 }
 ```
 
@@ -41,10 +41,10 @@ curl -X POST "https://api.uwuapps.com/api/scan/qr" \
 
 ## Notes
 
-- The image is processed by [QR Server](https://api.qrserver.com) — it is forwarded externally.
-- Supported formats include JPEG, PNG, GIF, BMP, and TIFF.
-- Returns `502` if the QR Server API is unreachable.
-- This is the only `POST` endpoint in the API. All other endpoints use `GET`.
+* The image is processed by [QR Server](https://api.qrserver.com) — it is forwarded externally.
+* Supported formats include JPEG, PNG, GIF, BMP, and TIFF.
+* Returns `502` if the QR Server API is unreachable.
+* This is the only `POST` endpoint in the API. All other endpoints use `GET`.
 
 ## Generating QR codes
 

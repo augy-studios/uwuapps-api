@@ -1,17 +1,17 @@
-# Random Joke
+# Joke
 
 Returns a random joke. Powered by [JokeAPI](https://v2.jokeapi.dev).
 
 ```
-GET /api/random/joke
+GET /random/joke
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `category` | No | `Any` | Joke category (see below) |
-| `type` | No | `single` | Joke format: `single` or `twopart` |
+| Parameter  | Required | Default  | Description                        |
+| ---------- | -------- | -------- | ---------------------------------- |
+| `category` | No       | `Any`    | Joke category (see below)          |
+| `type`     | No       | `single` | Joke format: `single` or `twopart` |
 
 ## Categories
 
@@ -22,7 +22,7 @@ GET /api/random/joke
 **Single joke:**
 
 ```bash
-curl "https://api.uwuapps.com/api/random/joke?category=Programming&type=single"
+curl "https://api.uwuapps.org/random/joke?category=Programming&type=single"
 ```
 
 ### Response (single)
@@ -39,7 +39,7 @@ curl "https://api.uwuapps.com/api/random/joke?category=Programming&type=single"
 **Two-part joke:**
 
 ```bash
-curl "https://api.uwuapps.com/api/random/joke?type=twopart"
+curl "https://api.uwuapps.org/random/joke?type=twopart"
 ```
 
 ### Response (twopart)
@@ -56,5 +56,5 @@ curl "https://api.uwuapps.com/api/random/joke?type=twopart"
 
 ## Notes
 
-- Jokes are filtered to exclude NSFW, religious, political, racist, sexist, and explicit content.
-- Returns `502` if JokeAPI is unreachable.
+* Jokes are filtered to exclude NSFW, religious, political, racist, sexist, and explicit content.
+* Returns `502` if JokeAPI is unreachable.

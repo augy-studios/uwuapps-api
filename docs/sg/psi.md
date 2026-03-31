@@ -1,34 +1,34 @@
-# PSI / Air Quality (Singapore)
+# PSI (Air Quality)
 
 Returns Singapore's air quality Pollutant Standards Index (PSI) readings from [data.gov.sg](https://data.gov.sg).
 
 ```
-GET /api/sg/psi
+GET /sg/psi
 ```
 
 ## Parameters
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `dateTime` | No | Latest | Specific date-time to query in `YYYY-MM-DDTHH:mm:ss` format |
-| `metric` | No | `psi_twenty_four_hourly` | PSI metric to use (see below) |
+| Parameter  | Required | Default                  | Description                                                 |
+| ---------- | -------- | ------------------------ | ----------------------------------------------------------- |
+| `dateTime` | No       | Latest                   | Specific date-time to query in `YYYY-MM-DDTHH:mm:ss` format |
+| `metric`   | No       | `psi_twenty_four_hourly` | PSI metric to use (see below)                               |
 
 ## Available metrics
 
-| Metric | Description |
-|---|---|
-| `psi_twenty_four_hourly` | 24-hour PSI (default) |
-| `psi_three_hourly` | 3-hour PSI |
-| `pm25_sub_index` | PM2.5 sub-index |
-| `pm10_sub_index` | PM10 sub-index |
-| `o3_sub_index` | Ozone sub-index |
-| `so2_sub_index` | Sulphur dioxide sub-index |
-| `co_sub_index` | Carbon monoxide sub-index |
+| Metric                   | Description               |
+| ------------------------ | ------------------------- |
+| `psi_twenty_four_hourly` | 24-hour PSI (default)     |
+| `psi_three_hourly`       | 3-hour PSI                |
+| `pm25_sub_index`         | PM2.5 sub-index           |
+| `pm10_sub_index`         | PM10 sub-index            |
+| `o3_sub_index`           | Ozone sub-index           |
+| `so2_sub_index`          | Sulphur dioxide sub-index |
+| `co_sub_index`           | Carbon monoxide sub-index |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/sg/psi"
+curl "https://api.uwuapps.org/sg/psi"
 ```
 
 ### Response
@@ -72,16 +72,16 @@ curl "https://api.uwuapps.com/api/sg/psi"
 
 ## PSI bands
 
-| Range | Name | Class |
-|---|---|---|
-| 0–50 | Good | `good` |
-| 51–100 | Moderate | `moderate` |
-| 101–200 | Unhealthy | `unhealthy` |
+| Range   | Name           | Class            |
+| ------- | -------------- | ---------------- |
+| 0–50    | Good           | `good`           |
+| 51–100  | Moderate       | `moderate`       |
+| 101–200 | Unhealthy      | `unhealthy`      |
 | 201–300 | Very Unhealthy | `very-unhealthy` |
-| 301+ | Hazardous | `hazardous` |
+| 301+    | Hazardous      | `hazardous`      |
 
 ## Notes
 
-- Returns the most recent reading if `dateTime` is not specified.
-- Returns `404` if no readings are available for the requested time.
-- Returns `502` if data.gov.sg is unreachable.
+* Returns the most recent reading if `dateTime` is not specified.
+* Returns `404` if no readings are available for the requested time.
+* Returns `502` if data.gov.sg is unreachable.

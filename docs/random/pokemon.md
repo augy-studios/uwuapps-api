@@ -1,21 +1,21 @@
-# Random Pokémon
+# Pokémon
 
 Returns data for a random (or specific) Pokémon. Powered by [PokéAPI](https://pokeapi.co).
 
 ```
-GET /api/random/pokemon
+GET /random/pokemon
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `id` | No | Pokémon ID (1–1025). If omitted, a random Pokémon is returned |
+| Parameter | Required | Description                                                   |
+| --------- | -------- | ------------------------------------------------------------- |
+| `id`      | No       | Pokémon ID (1–1025). If omitted, a random Pokémon is returned |
 
 ## Example
 
 ```bash
-curl "https://api.uwuapps.com/api/random/pokemon"
+curl "https://api.uwuapps.org/random/pokemon"
 ```
 
 ### Response
@@ -42,4 +42,4 @@ curl "https://api.uwuapps.com/api/random/pokemon"
 
 ## Notes
 
-- Returns `502` if PokéAPI is unreachable.
+* Returns `502` if PokéAPI is unreachable.
