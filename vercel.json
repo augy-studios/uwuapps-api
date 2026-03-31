@@ -221,6 +221,10 @@
             "destination": "/api/detect/browser"
         },
         {
+            "source": "/detect/location",
+            "destination": "/api/detect/location"
+        },
+        {
             "source": "/generate/gradient",
             "destination": "/api/generate/gradient"
         },
