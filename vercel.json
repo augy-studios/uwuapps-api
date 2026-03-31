@@ -247,6 +247,14 @@
         {
             "source": "/scan/qr",
             "destination": "/api/scan/qr"
+        },
+        {
+            "source": "/translate/text",
+            "destination": "/api/translate/text"
+        },
+        {
+            "source": "/translate/detect",
+            "destination": "/api/translate/detect"
         }
     ]
 }
