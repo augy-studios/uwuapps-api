@@ -275,6 +275,14 @@
         {
             "source": "/weather/nowcast",
             "destination": "/api/weather/nowcast"
+        },
+        {
+            "source": "/wordle/word",
+            "destination": "/api/wordle/word"
+        },
+        {
+            "source": "/wordle/validate",
+            "destination": "/api/wordle/validate"
         }
     ]
 }
