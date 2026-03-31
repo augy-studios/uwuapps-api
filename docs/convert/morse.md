@@ -3,26 +3,26 @@
 Converts text to Morse code or Morse code back to text. Direction is auto-detected.
 
 ```
-GET /api/convert/morse
+GET /convert/morse
 ```
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `text` | Yes | Text to convert (plain text or Morse code) |
+| Parameter | Required | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| `text`    | Yes      | Text to convert (plain text or Morse code) |
 
 ## Auto-detection
 
 The API automatically detects the direction:
 
-- **Text → Morse:** Input is plain text (e.g. `HELLO`)
-- **Morse → Text:** Input contains dots (`.`), dashes (`-`), and slashes (`/`)
+* **Text → Morse:** Input is plain text (e.g. `HELLO`)
+* **Morse → Text:** Input contains dots (`.`), dashes (`-`), and slashes (`/`)
 
 ## Example: text to Morse
 
 ```bash
-curl "https://api.uwuapps.com/api/convert/morse?text=HELLO"
+curl "https://api.uwuapps.org/convert/morse?text=HELLO"
 ```
 
 ### Response
@@ -39,7 +39,7 @@ curl "https://api.uwuapps.com/api/convert/morse?text=HELLO"
 ## Example: Morse to text
 
 ```bash
-curl "https://api.uwuapps.com/api/convert/morse?text=.... . .-.. .-.. ---"
+curl "https://api.uwuapps.org/convert/morse?text=.... . .-.. .-.. ---"
 ```
 
 ### Response
@@ -55,7 +55,7 @@ curl "https://api.uwuapps.com/api/convert/morse?text=.... . .-.. .-.. ---"
 
 ## Morse code format
 
-- Letters are separated by **spaces**
-- Words are separated by **` / `** (space-slash-space)
+* Letters are separated by **spaces**
+* Words are separated by **`/`** (space-slash-space)
 
 For example, `HELLO WORLD` → `.... . .-.. .-.. --- / .-- --- .-. .-.. -..`
