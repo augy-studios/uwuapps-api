@@ -255,6 +255,18 @@
         {
             "source": "/translate/detect",
             "destination": "/api/translate/detect"
+        },
+        {
+            "source": "/weather/current",
+            "destination": "/api/weather/current"
+        },
+        {
+            "source": "/weather/search",
+            "destination": "/api/weather/search"
+        },
+        {
+            "source": "/weather/nowcast",
+            "destination": "/api/weather/nowcast"
         }
     ]
 }
