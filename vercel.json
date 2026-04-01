@@ -20,6 +20,11 @@
             "maxDuration": 30
         }
     },
+    "redirects": [{
+        "source": "/",
+        "destination": "https://docs.api.uwuapps.org",
+        "permanent": false
+    }],
     "headers": [{
         "source": "/api/(.*)",
         "headers": [{
