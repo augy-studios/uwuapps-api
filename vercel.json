@@ -46,6 +46,9 @@
         ]
     }],
     "rewrites": [{
+            "source": "/no",
+            "destination": "/api/no"
+        }, {
             "source": "/uen/generate",
             "destination": "/api/uen/generate"
         },
