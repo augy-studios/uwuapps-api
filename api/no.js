@@ -22,6 +22,8 @@ module.exports = async (req, res) => {
 
     if (fetchError) throw fetchError;
 
+    await supabase.from('no_stats').insert({ platform: 'api' });
+
     return success(res, { reason: data.reason });
   } catch (err) {
     console.error(err);
